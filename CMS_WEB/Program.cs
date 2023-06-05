@@ -11,6 +11,14 @@ namespace CMS_WEB
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+         //   var configuration = new ConfigurationBuilder()
+         //.SetBasePath(builder.Environment.ContentRootPath)
+         //.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+         //.Build();
+
+         //   // Đọc các giá trị từ appsettings.json
+         //   var connectionString = configuration.GetConnectionString("local");
+         //   var secretKey = configuration.GetValue<string>("SecretKey:key");
 
 
             //Accept CORS
@@ -34,7 +42,7 @@ namespace CMS_WEB
             });
 
             //Json Web Token 
-            var secretKeyBytes = Encoding.UTF8.GetBytes(Settings.SecretKey());
+            var secretKeyBytes = Encoding.UTF8.GetBytes(secretKey);
             // Tạo xác thực
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
             {
