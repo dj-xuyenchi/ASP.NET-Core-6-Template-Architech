@@ -12,9 +12,10 @@ namespace DJ_UploadFile.Services
 {
     public class CloudinaryUpload
     {
-        static string cloudName = "dushydq6r";
-        static string apiKey = "856473519683811";
-        static string apiSecret = "zhh1gmffet0xFszsh34RGwweEGY";
+        //https://console.cloudinary.com/
+        static string cloudName = "";
+        static string apiKey = "";
+        static string apiSecret = "";
         static private readonly Random rnd = new Random();
         static public
             Account account = new Account(cloudName, apiKey, apiSecret);
