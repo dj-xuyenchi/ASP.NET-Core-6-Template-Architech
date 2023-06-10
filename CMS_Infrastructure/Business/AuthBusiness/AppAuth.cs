@@ -14,10 +14,10 @@ namespace CMS_Infrastructure.Business.AuthBusiness
 {
     public class AppAuth : BaseBusiness, IAppAuth
     {
-        private readonly 
-        public AppAuth()
-        {
-        }
+    
+        //public AppAuth()
+        //{
+        //}
 
         //public async Task<LoginResponse<AuthDataRespon>> Login(RequestLogin request)
         //{
@@ -194,7 +194,7 @@ namespace CMS_Infrastructure.Business.AuthBusiness
         //            new Claim(ClaimTypes.Role, _context.user_role.Find(user.UserRoleId).UserRoleCode),
         //                     new Claim("LoginTime", DateTime.Now.ToString()),
         //            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                    
+
 
         //            //roles
         //        }),
@@ -312,6 +312,6 @@ namespace CMS_Infrastructure.Business.AuthBusiness
         //        result.Messenger = "Lấy dữ liệu thất bại! Exception: " + ex.Message;
         //        return result;
         //    }
-        //}
-    }
+    //}
+}
 }
